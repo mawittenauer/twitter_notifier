@@ -8,7 +8,17 @@ cd twitter_notifier/
 npm install
 ```
 
+```
+cd client/
+npm install
+```
+
 ## Run
 ```
 node index.js
+```
+
+```
+cd client/
+npm run start
 ```
