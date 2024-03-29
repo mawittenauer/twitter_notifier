@@ -1,0 +1,3 @@
+curl http://localhost:8080/hook -X POST -H 'Content-Type: application/json' -d '{ "type": "like", "username": "Test Like" }'
+
+curl http://localhost:8080/hook -X POST -H 'Content-Type: application/json' -d '{ "type": "follower", "username": "Test Follower" }'

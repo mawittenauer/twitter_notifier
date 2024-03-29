@@ -39,11 +39,18 @@ function App() {
             }}
             variant='outlined'>
                 <Typography level="h1" component="h1">Twitter Notifications</Typography>
-                { notifications.map(n => 
-                    <>
-                        <Alert variant='outlined'><strong>@opensourceDet</strong> liked <strong>@{n.username}'s</strong> Tweet.</Alert>
-                    </>    
-                )
+                { notifications.map(n => {
+                        return (
+                            <>
+                                {   n.type === "like" ?
+                                    <Alert variant='outlined'><strong>@opensourceDet</strong> liked <strong>@{n.username}'s</strong> Tweet</Alert>
+                                    :
+                                    <Alert variant='outlined'><strong>@opensourceDet</strong> was followed by <strong>@{n.username}</strong></Alert>
+                                }
+                            </>
+                        );
+                    }
+                    )
                 }
             </Sheet>
         </CssVarsProvider>
