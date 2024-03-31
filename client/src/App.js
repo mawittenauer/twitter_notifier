@@ -43,9 +43,9 @@ function App() {
                         return (
                             <>
                                 {   n.type === "like" ?
-                                    <Alert variant='outlined'><strong>@opensourceDet</strong> liked <strong>@{n.username}'s</strong> Tweet</Alert>
+                                    <Alert variant='outlined'><strong>You</strong> liked <strong>@{n.username}'s</strong> Tweet</Alert>
                                     :
-                                    <Alert variant='outlined'><strong>@opensourceDet</strong> was followed by <strong>@{n.username}</strong></Alert>
+                                    <Alert variant='outlined'><strong>You</strong> were followed by <strong>@{n.username}</strong></Alert>
                                 }
                             </>
                         );
