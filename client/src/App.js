@@ -9,9 +9,9 @@ function App() {
     const [notifications, setNotifications] = useState([]);
     const handleWebsocket = () => {
         const newSocket = new WebSocket("ws://localhost:8000/ws");
-        newSocket.onopen = () => console.log('WS Connected');
-        newSocket.onclose = () => console.log('WS Disconnected');
-        newSocket.onerror = (err) => console.log('WS Error');
+        newSocket.onopen = () => console.log('Websocket Connected');
+        newSocket.onclose = () => console.log('Websocket Disconnected');
+        newSocket.onerror = (err) => console.log('Websocket Error');
         newSocket.onmessage = (e) => {
             let data = JSON.parse(e.data);
             console.log("WS Receives: ", data);
