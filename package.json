@@ -6,6 +6,7 @@
   "scripts": {
     "api": "node index.js",
     "client": "cd client && npm run start",
+    "dev": "concurrently \"npm run api\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/mawittenauer/twitter_notifier#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
     "express": "^4.19.2",
     "uuid": "^9.0.1",
     "ws": "^8.16.0"
